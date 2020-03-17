@@ -130,7 +130,9 @@ print ("\n+ ".join(formulaTerms))
 
 print ("\nValues approx formula and true value")
 for j in range(30):
-    print ("%d: \t %s \t %f" %(j, approxFormula(j), getProb(symbols, runs, j)))
+    apprVal = approxFormula(j)
+    corrVal = getProb(symbols, runs, j)
+    print ("%d: \t %s \t %s \t %s" %(j, apprVal, corrVal, abs(corrVal-apprVal)))
 
 
 #Q = getMat(symbols, runs)
