@@ -119,7 +119,7 @@ runs = ["123456", "112233", "445566", "111222", "333444", "555666",
 symbols = set(c for c in "".join(runs))
 
 aCoeffs, eigVals = getApproxFormula(symbols, runs)
-tarkkuus = 3
+tarkkuus = 4
 approxFormula = lambda n: sum(aCoeffs[k]*eigVals[k]**n for k in range(tarkkuus)).real_part()
 
 print ("Approximate formula")
